@@ -85,6 +85,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('/sertifikasi/{id}', [SertifikasiController::class, 'update'])->name('sertifikasi.update');
 	Route::delete('/sertifikasi/{id}', [SertifikasiController::class, 'delete'])->name('sertifikasi.delete');
 
+	Route::get('/riwayatLamaran', [RiwayatLamaranController::class, 'index'])->name('riwayatLamaran.index');
+	Route::get('/riwayatLamaran/{id}', [RiwayatLamaranController::class, 'show'])->name('riwayatLamaran.show');
+	
+
 
 	// Route::resource('/sertifikasi', [SertifikasiController::class, 'index']);
 	// Route::resources([

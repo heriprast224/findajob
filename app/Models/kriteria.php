@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class kriteria extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'pendidikan',
+        'skill',
+        'pengalaman_kerja',
+        'penghargaan',
+        'organisasi',
+        'bahasa',
+    ];
 }

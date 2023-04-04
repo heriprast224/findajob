@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class lowonganKerja extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'nama',
+        'jenis',
+        'lokasi',
+        'gaji',
+        'deskripsi',
+        'status',
+        'kriteria_id',
+        'penyedia_kerja_id',
+    ];
 }

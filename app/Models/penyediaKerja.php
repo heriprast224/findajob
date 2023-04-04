@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class penyediaKerja extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'bidang',
+        'alamat',
+        'no_telp',
+        'jml_karyawan',
+        'deskripsi',
+        'website',
+        'sosal_media',
+        'foto',
+        'user_id',
+    ];
 }

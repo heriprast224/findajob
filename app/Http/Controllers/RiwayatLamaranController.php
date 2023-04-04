@@ -12,9 +12,15 @@ class RiwayatLamaranController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            $data = riwayatLamaran::select('id','terkirim_pada','status','lowongan_kerja_id','pencari_kerja_id')->get();
+            return Datatables::of($data)->addIndexColumn()
+                ->make(true);
+        }
+
+        return view('pencariKerja.riwayatLamaran.index');
     }
 
     /**

@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class riwayatLamaran extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'id',
+        'terkirim_pada',
+        'status',
+        'lowongan_kerja_id',
+        'pencari_kerja_id'
+    
+    ];
 }
